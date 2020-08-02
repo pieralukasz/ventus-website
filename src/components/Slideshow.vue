@@ -61,6 +61,7 @@
                 button
                     background-color: #3831db
                     border: 1px solid #3831db
+
     // Slides styles
     .slide
         display: block

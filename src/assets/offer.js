@@ -96,3 +96,13 @@ const offer = [
 
 
 export default offer
+
+
+/*
+* Chłodnictwo // instalacje
+* 
+*
+*
+*
+*
+* */
