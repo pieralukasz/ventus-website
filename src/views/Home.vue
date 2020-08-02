@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <ReferenceItem v-if="isPickedPhotoState" :pickPhoto = "isPickedPhotoState"/>
+    <ReferenceItem v-if="isPickedPhotoState" :pickPhoto = "isPickedPhotoState" />
     <Navigation/>
     <Slider/>
     <Information/>
     <Offer />
-    <Realization />
+    <Realization ref="realization" />
     <Relationship />
     <Reference />
     <Contact />
@@ -25,6 +25,8 @@ import Reference from '../components/Reference'
 import ReferenceItem from "../components/ReferenceItem";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+
+
 export default {
   name: 'Home',
   components: {
@@ -51,10 +53,8 @@ export default {
         }
       }
   },
-  data(){
-    return{
-
-    }
+  data() {
+    return {}
   }
 }
 </script>

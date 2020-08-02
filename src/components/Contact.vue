@@ -1,6 +1,6 @@
 <template>
-    <div class="contact">
-        <div class="contact-title">
+    <div class="contact" id="Contact" >
+        <div class="contact-title" >
             Skontaktuj się z nami
         </div>
     </div>
@@ -16,9 +16,9 @@
 
     .contact
         width: 100%
-        margin-top: 4%
-        height: 500px
+        height: 540px
         .contact-title
+            padding-top: 3%
             width: 100%
             text-align: center
             font-size: 2rem

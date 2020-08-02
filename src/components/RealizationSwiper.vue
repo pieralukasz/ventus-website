@@ -2,8 +2,10 @@
 <template>
     <swiper class="swiper" :options="swiperOption">
         <swiper-slide v-for ="(item, index) in realizationList" :key="index">
-            <SwiperItem :item="realizationList[index]"></SwiperItem>
-            <div class="white-rectangle"><span>{{item.name}}</span></div>
+            <SwiperItem :item="item"></SwiperItem>
+            <div class="white-rectangle">
+                <span>{{item.name}}</span>
+            </div>
         </swiper-slide>
         <swiper-slide>Slide 4</swiper-slide>
         <swiper-slide>Slide 5</swiper-slide>

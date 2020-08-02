@@ -1,5 +1,5 @@
 <template>
-    <div class="information">
+    <div class="information" >
         <div class="title">
 <!--            <div class="title-up">Ventus s.c. Budownictwo, instalacje, automatyka przemysłowa. Michalak J., Dłużewski R.</div>-->
             <div class="first-information">

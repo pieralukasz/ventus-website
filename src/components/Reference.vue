@@ -1,5 +1,5 @@
 <template>
-    <div class="reference">
+    <div class="reference" id="Reference">
         <div class="title-reference">Referencje i Certyfikaty</div>
         <div class="container-reference">
             <img v-for="(ref, index) in reference" :key="index" :src="ref" @click="setReference(index + 1)"/>

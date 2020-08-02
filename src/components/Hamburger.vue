@@ -1,8 +1,8 @@
 <template>
     <div class="hamburger">
             <div class="container-for-hamburger">
-                <div v-for="(item, index) in navItem" :key="index" class="hamburger-item">
-                    {{ item }}
+                <div v-for="(item, index) in navItem" :key="index" class="hamburger-item" v-scroll-to="item.scrollTo" @click="hideMenu">
+                    {{ item.name }}
                 </div>
                 <i class="material-icons" @click="hideMenu" >clear</i>
 <!--                <img src="../assets/ventus.png">-->
@@ -15,6 +15,9 @@
     export default {
         name: "Hamburger",
         props: ['navItem', 'hamburger', 'hideMenu'],
+        mounted() {
+          console.log(this.$scrollTo())
+        }
 
     }
 </script>

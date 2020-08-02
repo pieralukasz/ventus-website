@@ -1,12 +1,12 @@
 <template>
-    <div class="navigation">
+    <div class="navigation" id="Information">
         <nav ref="navigation">
             <div class="logo item" ref="logo">
                 <img src="../assets/ventus.png">
             </div>
             <ul>
-                <li v-for="(item, index) in navItem" :key="index" ref="item-nav">
-                    {{ item }}
+                <li v-for="(item, index) in navItem" :key="index" v-scroll-to="item.scrollTo" ref="item-nav">
+                    {{ item.name }}
                 </li>
             </ul>
             <i class="material-icons" @click="showMenu">menu</i>
@@ -33,17 +33,48 @@
         data(){
             return{
                 hamburger: false,
-                navItem: ['O nas', 'Oferta', 'Realizacje', 'Współpraca', 'Referencje', 'Kontakt']
+                navItem: [
+                  {
+                    name: 'O nas',
+                    scrollTo: '#Information'
+                  },
+                  {
+                    name: 'Oferta',
+                    scrollTo: '#Offer'
+                  },
+                  {
+                    name: 'Realizacje',
+                    scrollTo: '#Realization'
+                  },
+                  {
+                    name: 'Współpraca',
+                    scrollTo: '#Relationship'
+                  },
+                  {
+                    name: 'Referencje',
+                    scrollTo: '#Reference'
+                  },
+                  {
+                    name: 'Kontakt',
+                    scrollTo: '#Contact'
+                  }
+                ]
             }
         },
         components:{
           Hamburger
         },
         created() {
+
             window.addEventListener('scroll', this.makeTransparent)
             window.addEventListener('resize', this.makeLogo)
+
+          console.log(this.$root.VueScrollTo)
         },
-        methods: {
+      mounted() {
+        this.makeTransparent()
+      },
+      methods: {
             showMenu(){
                 this.hamburger = true
             },

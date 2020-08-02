@@ -1,5 +1,5 @@
 <template>
-    <div class="offer">
+    <div class="offer" id="Offer">
         <div class="title">
             Nasze usługi
         </div>
